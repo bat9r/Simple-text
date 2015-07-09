@@ -99,7 +99,9 @@ def settingsEditor(ev):
     fontsListbox=Listbox(root, selectmode='BROWSE', name='fontsListbox')
     fontsListbox.place(x=10, y=10, width=135, height=160)
     fontsListbox.insert(END, '-'*35)
-    fontsList = ["Sans ", "New ", "Arial ", "Times ","Helvetica "]
+    fontsList = ["Comic ", "Courier ", "Arial ",
+                 "Times ","Helvetica ", "Fixedsys ",
+                 "Verdana ", "Ansi "]
     for item in fontsList:
         fontsListbox.insert(END, item)
     fontsListbox.bind('<<ListboxSelect>>', changeFontStyle)
@@ -108,7 +110,7 @@ def settingsEditor(ev):
     fontsSizeListbox=Listbox(root, selectmode='BROWSE')
     fontsSizeListbox.place(x=150, y=10, width=25, height=160)
     fontsSizeListbox.insert(END, '-'*5)
-    fontsSizeList = ["10", "12", "14", "16","18"]
+    fontsSizeList = ["8", "10", "12", "14", "16", "18", "20"]
     for item in fontsSizeList:
         fontsSizeListbox.insert(END, item)
     fontsSizeListbox.bind('<<ListboxSelect>>', changeFontSize)
